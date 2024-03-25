@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-spring-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-spring-app
+  template:
+    metadata:
+      labels:
+        app: my-spring-app
+    spec:
+      containers:
+        - name: my-spring-app
+          image: travisriegler/microservices-v1test
+          ports:
+            - containerPort: 8080
