@@ -7,8 +7,8 @@ pipeline {
     }
 
     environment {
-        IMAGE_TAG = "my-app:${env.BUILD_ID}"
-        DOCKER_REGISTRY = "my-registry.example.com"
+        IMAGE_TAG = "${env.BUILD_ID}"
+        DOCKER_REGISTRY = "travisriegler"
         IMAGE_NAME = "my-app"
     }
 
