@@ -34,7 +34,7 @@ pipeline {
             steps {
                 script {
                     // Login to Docker Hub using credentials fetched from AWS Secrets Manager
-                    withCredentials([string(credentialsId: 'docker-jenkins-pat', variable: 'DOCKER_JENKINS_PAT')]) {
+                    withCredentials([string(credentialsId: 'docker-jenkins-patv2', variable: 'DOCKER_JENKINS_PAT')]) {
                         sh "echo $DOCKER_JENKINS_PAT | docker login --username travisriegler --password-stdin"
                     }
 
