@@ -14,6 +14,6 @@ public class BasicController {
     @GetMapping
     public ResponseEntity<String> basic(){
 
-        return ResponseEntity.ok("Gateway server ID: " + instanceUuid);
+        return ResponseEntity.ok("Testing my jenkins connection to EKS. Gateway server ID: " + instanceUuid);
     }
 }
