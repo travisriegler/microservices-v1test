@@ -35,11 +35,11 @@ pipeline {
                 script {
                     // Login to Docker Hub using credentials fetched from AWS Secrets Manager
                     withCredentials([string(credentialsId: 'docker-jenkins-patv2', variable: 'DOCKER_JENKINS_PAT')]) {
-                        sh "echo $DOCKER_JENKINS_PAT | docker login --username travisriegler --password-stdin"
+                        sh 'echo $DOCKER_JENKINS_PAT | docker login --username travisriegler --password-stdin'
                     }
 
                     // Push the built image to Docker Hub
-                    sh "docker push ${env.DOCKER_REGISTRY}/${env.IMAGE_NAME}:${env.IMAGE_TAG}"
+                    sh 'docker push $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG'
                 }
             }
         }
