@@ -51,6 +51,8 @@ pipeline {
 
                     // Print the Kubernetes version to verify the connection
                     sh 'kubectl version'
+
+                    sh "kubectl set image deployment/my-spring-app-deployment my-spring-app=${env.DOCKER_REGISTRY}/${env.IMAGE_NAME}:${env.IMAGE_TAG}"
                 }
             }
         }
