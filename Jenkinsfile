@@ -43,5 +43,13 @@ pipeline {
                 }
             }
         }
+
+        stage('Connect to EKS') {
+            steps {
+                script {
+                    sh "aws eks update-kubeconfig --region us-east-1 --name v1test"
+                }
+            }
+        }
     }
 }
