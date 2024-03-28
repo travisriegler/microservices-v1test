@@ -50,7 +50,7 @@ pipeline {
                     sh 'aws eks update-kubeconfig --region us-east-1 --name v1test'
 
                     // Print the Kubernetes version to verify the connection
-                    sh 'kubectl version --short'
+                    sh 'kubectl version'
                 }
             }
         }
