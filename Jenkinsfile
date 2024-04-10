@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven 'Maven-tool' // Name of the Maven tool you configured in Jenkins
-        jdk 'JDK-tool' // Name of the JDK tool you configured in Jenkins. test9 on 4.10.24
+        jdk 'JDK-tool' // Name of the JDK tool you configured in Jenkins. test10 on 4.10.24
     }
 
     stages {
