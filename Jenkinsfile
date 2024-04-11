@@ -34,9 +34,9 @@ pipeline {
                     echo "1"
 
                     if (env.CHANGE_TARGET != null) {
-                        echo 'we should run the CI pipeline'
+                        echo 'we should run the CI pipeline...'
                     } else {
-                        echo 'we should run the CD pipeline'
+                        echo 'we should run the CD pipeline...'
                     }
                 }
             }
