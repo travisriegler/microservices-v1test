@@ -31,6 +31,7 @@ pipeline {
                     echo "JENKINS_URL: ${env.JENKINS_URL}"
                     echo "GIT_COMMIT: ${env.GIT_COMMIT}"
                     echo "GIT_BRANCH: ${env.GIT_BRANCH}"
+                    echo "1"
                 }
             }
         }
