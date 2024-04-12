@@ -31,6 +31,13 @@ pipeline {
                     echo "JENKINS_URL: ${env.JENKINS_URL}"
                     echo "GIT_COMMIT: ${env.GIT_COMMIT}"
                     echo "GIT_BRANCH: ${env.GIT_BRANCH}"
+                    echo "1"
+
+                    if (env.CHANGE_TARGET != null) {
+                        echo 'we should run the CI pipeline...'
+                    } else {
+                        echo 'we should run the CD pipeline...'
+                    }
                 }
             }
         }
